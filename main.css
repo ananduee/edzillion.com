@@ -1,0 +1,192 @@
+html {
+	background-color: white;
+}
+
+body {
+	width:1024px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #DADADA;
+
+}
+
+header {
+	height:162px;
+	margin:10px;
+}
+
+#headerleft {
+	width:620px;
+	height:162px;
+	float:left;
+}
+
+#websitename {
+	font-size:8em;
+	margin-left:-18px;
+	margin-top:10px;
+}
+
+#websiteicon {
+	font-size: .85em;
+}
+
+nav#mainnav {
+	height: 20px;
+}
+
+ul#filter {
+	margin:0; 
+	padding:0;
+	position: relative;
+	float: left;
+	list-style: none;
+	width: 100%;
+}
+
+ul#filter li {
+	border-right: 1px solid #dedede;
+	float: left;
+	margin-right: 10px;
+	padding-right: 10px;
+	font-size:1.95em;
+}
+
+ul#filter li:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+ul#filter a { color: #999; text-decoration: none; }
+
+ul#filter li.current a, ul#filter a:hover { text-decoration: underline; }
+ul#filter li.current a { color: #333; font-weight: bold; }
+
+#headerright {
+	float:right;
+	width:364px;
+	height:122px;
+
+	padding: 20px 10px 20px 10px;
+}
+
+#headerblurb {
+	margin-left:-10px;
+	margin-right:-10px;
+	text-align: center;
+	height:73px;
+	font-size:1.2em;
+}
+
+#iconbar {
+	height:50px;
+	margin-left:-15px;
+	margin-right:-35px;
+}
+
+.iconbaritem {
+	font-size:4.3em;
+	float:left;
+	margin-right:13px;
+}
+
+
+section {
+	margin-left:9px;
+}
+
+section a {
+	color:inherit;
+ text-decoration: none;
+}
+
+.itembox {
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+	width:193px;
+	height:273px;
+	border-top: 8px solid black;
+	background-color: white;
+	position:relative;
+}
+
+.itemboxsymbol {
+	font-size:4em;
+	position:absolute;
+	text-align: center;
+	vertical-align: middle;
+	line-height:273px;
+	width:193px;
+	height:273px;
+	z-index: 1;
+}
+
+.itemboxtitle {
+	font-size:1em;
+	position:absolute;
+	text-align: center;
+	bottom:10px;
+	width:193px;
+	z-index: 1;
+}
+.itemboxbg {
+	position:absolute;
+	width:193px;
+	height:273px;
+	z-index:0;
+}
+
+
+footer {
+	border-top: 8px solid black;
+	clear:both;
+	height:227px;
+	margin:10px;
+	padding: 10px 50px 10px 50px;
+}
+
+.footercol {
+	float:left;
+	color:gray;
+	text-align: center;
+	margin:10px;
+	width:280px;
+	height:100%;
+	font-size: 1.4em;
+}
+
+.footercol ul {
+	margin:0; 
+	padding:0;
+	list-style: none;
+}
+
+
+@font-face {
+    font-family: 'zillion_glyphsregular';
+    src: url('./assets/fonts/zillionglyphs-webfont.eot');
+    src: url('./assets/fonts/zillionglyphs-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/zillionglyphs-webfont.woff') format('woff'),
+         url('./assets/fonts/zillionglyphs-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.iconfont { font-family: 'zillion_glyphsregular', Arial, sans-serif; }
+
+@font-face {
+    font-family: 'franchiseregular';
+    src: url('./assets/fonts/franchise-bold-webfont.eot');
+    src: url('./assets/fonts/franchise-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/franchise-bold-webfont.woff') format('woff'),
+         url('./assets/fonts/franchise-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.franchisefont { font-family: 'franchiseregular', Arial, sans-serif; }
+
+@font-face {
+	font-family:"Lobster1.4";
+	src:url("Lobster_1_4.eot?") format("eot"),
+		url("Lobster_1_4.woff") format("woff"),
+		url("Lobster_1_4.ttf") format("truetype"),
+		url("Lobster_1_4.svg#Lobster1.4") format("svg");
+	font-weight:normal;font-style:normal;
+}
+.lobsterfont { font-family: 'Lobster1.4', Arial, sans-serif; }
