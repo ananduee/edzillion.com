@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<section id="leftbar">
+	<div class="itembox">
+		<div class="itemboxsymbol iconfont"><%- @getItemBoxSymbols(@document) %></div>
+		<div class="itemboxtitle franchisefont"><%= @document.title %></div>
+	</div>
+  <div id="related">
+    <span id="relatedtitle">Related</span>
+    <% for document in @document.relatedDocuments: %>
+    <a href="http://localhost/edzillion.com/out<%= document.url %>">
+      <div class="itembox relatedbox">
+        <div class="itemboxbg">
+          <img src="./img/<%= document.image %>"/>
+        </div>
+        <div class="itemboxsymbol iconfont"><%- @getItemBoxSymbols(document) %></div>
+        <div class="itemboxtitle franchisefont"><%= document.title %></div>
+      </div>
+    </a>
+    <% end %>
+  </div>
+</section>	
+<article>
+    <div id="articleimgholder">
+      <img src="img/<%= @document.image %>">
+    </div>
+    <div id="titleholder">  
+      <h2><span class="iconfont" id="titlesymbols"><%- @getItemBoxSymbols(@document) %></span><%= @document.title %></h2>
+    </div>  
+
+    <div class="date LiberationSansBold"><%= @document.date.toShortDateString() %></div>
+
+    <div id="articlecontent">
+      <%- @content %>
+    </div>
+
+</article>
+<br>
+<section id="commentsection">
+  <div class="page-comments">
+    <%- @partial('services/disqus', @) %>
+  </div>
+</section>

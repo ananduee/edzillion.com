@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Our Meta -->
+    <meta charset="utf-8">
+    <meta name="author" content="<%= @site.author %>" />
+    <title><%= @getPageTitle() %></title>
+
+    <!-- DocPad Meta -->
+    <%- @getBlock('meta').toHTML() %>
+
+    <!-- DocPad Styles + Our Own -->
+    <%- @getBlock('styles').add(['styles/style.css']).toHTML() %>
+
+    <!-- DocPad Scripts + Our Own -->
+    <%- @getBlock('scripts').add((@site.scripts).concat(@document.scripts or [])).toHTML() %>
+
+
+    <link rel="shortcut icon" href="http://edzillion.com/favicon.ico" />
+
+</head>
+<body>  
+    <a href="https://github.com/edzillion/edzillion.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div id="wrapper">
+        <header>
+            <div id="headerleft">
+                <a href="http://localhost/edzillion.com/out">
+                    <div id="websitename" class="franchisefont"><span id="websiteicon" class="iconfont">&#90;</span>EDZILLION</div>
+                </a>
+
+            </div>
+            <div id="headerright">
+                <div id="headerblurb" class="lobsterfont"><%- @site.subheading %></div>
+            </div>
+            <nav id="mainnav" >
+                <ul id="filter">
+                    <li id="all" class="franchisefont current"><a href="http://localhost/edzillion.com/out/"><span class="iconfont navicon">&#203;</span>ALL</a></li>  
+                    <li id="games" class="franchisefont"><a href="http://localhost/edzillion.com/out/"><span class="iconfont navicon">&#48;</span>GAMES</a></li>  
+                    <li id="code" class="franchisefont"><a href="http://localhost/edzillion.com/out/"><span class="iconfont navicon">&#114;</span>CODE</a></li>  
+                    <li id="music" class="franchisefont"><a href="http://localhost/edzillion.com/out/"><span class="iconfont navicon">&#81;</span>MUSIC</a></li>
+                    <li id="design" class="franchisefont"><a href="http://localhost/edzillion.com/out/"><span class="iconfont navicon">&#71;</span>DESIGN</a></li>
+                    <li id="comment" class="franchisefont"><a href="#"><span class="iconfont navicon">&#95;</span>COMMENT</a></li>
+                    <li id="raidio" class="franchisefont"><a href="#"><span class="iconfont navicon">&#83;</span>RAIDIO</a></li> 
+                    <li id="video" class="franchisefont"><a href="#"><span class="iconfont navicon">&#75;</span>VIDEO</a></li> 
+                </ul>  
+            </nav>
+        </header>
+
+        <%- @content %>
+
+        <footer>
+            <div class="footercol franchisefont">
+                <h2>More Me</h2>
+                <ul>
+                    <li><%- @links.simplelifeforms %></li>
+                    <li><%- @links.vampirecities %></li>
+                    <li><%- @links.discogs %></li>
+                    <li><%- @links.soundcloud %></li>
+                    <li><%- @links.github %></li>           
+                </ul>
+                
+            </div>
+            <div class="footercol franchisefont">
+                <h2>Contact</h2>
+                <ul>
+                    <li><%- @links.email %></li>
+                    <li><%- @links.twitter %></li>
+                    <li><%- @links.linkedin %></li>
+                </ul>
+            </div>
+
+            <div class="footercol franchisefont">
+                <h2>Friends</h2>
+                <ul>
+                    <li><%- @links.alanodea %></li>
+                    <li><%- @links.twoc %></li>
+                    <li><%- @links.homoludo %></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

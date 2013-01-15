@@ -161,3 +161,27 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+#############
+## DocPad
+#############
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+node_modules
+npm-debug.log
+
+test/out/
+test/render-out/
+out/
