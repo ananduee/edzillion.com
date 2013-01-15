@@ -1,0 +1,44 @@
+{
+	"name": "edzillion.com",
+	"version": "0.1",
+	"description": "edzillion.com personal website",
+	"homepage": "https://edzillion.com",
+	"keywords": [
+		"docpad",
+		"personal",
+		"website"
+	],
+	"author": "Ed Murphy <edzillion@gmail.com> (http://edzillion.com)",
+	"maintainers": [
+		"Ed Murphy <edzillion@gmail.com> (http://edzillion.com)"
+	],
+	"contributors": [
+		"Ed Murphy <edzillion@gmail.com> (http://edzillion.com)"
+	],
+	"bugs": {
+		"url": "https://github.com/edzillion/edzillion.com/issues"
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "http://github.com/edzillion/edzillion.com.git"
+	},
+	"engines" : {
+		"node": "0.8.x",
+		"npm": "1.1.x"
+	},
+	"dependencies": {
+		"docpad": "6.x",
+		"docpad-plugin-coffeescript": "2.x",
+		"docpad-plugin-coffeekup": "2.x",
+		"docpad-plugin-eco": "2.x",
+		"docpad-plugin-marked": "2.x",
+		"docpad-plugin-partials": "2.x",
+		"docpad-plugin-gist": "1.x",
+		"docpad-plugin-related": "2.x",
+		"docpad-plugin-text": "2.x"
+	},
+	"devDependencies": {
+		"docpad-plugin-livereload": "2.x"
+	},
+	"main": "node_modules/docpad/bin/docpad-server"
+}
